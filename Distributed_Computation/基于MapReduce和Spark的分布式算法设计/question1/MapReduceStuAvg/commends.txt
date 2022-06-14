@@ -1,0 +1,14 @@
+cd ./share/question1/MapReduceStuAvg
+
+mvn clean
+mvn package
+
+hadoop fs -mkdir /input
+hadoop fs -put ./grades.txt /input
+hadoop fs -cat /input/grades.txt
+
+hadoop jar ./target/MapReduceStuAvg.jar org.example.MapReduceStuAvg /input/grades.txt /output
+
+hadoop fs -ls /output
+hadoop fs -cat /output/part-r-00000
+hadoop fs -rm -r /output

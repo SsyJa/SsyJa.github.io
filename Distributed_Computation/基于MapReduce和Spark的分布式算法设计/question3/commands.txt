@@ -1,0 +1,14 @@
+cd ./share/question3
+
+hadoop fs -put ./grades.txt /
+
+
+spark-submit spark_avg.py
+
+hadoop fs -ls /user/root/result1
+hadoop fs -cat /user/root/result1/part-00000
+hadoop fs -rm -r 
+
+hadoop fs -ls /user/root/result2
+hadoop fs -cat /user/root/result2/part-00000
+hadoop fs -rm -r 

@@ -1,0 +1,3 @@
+org/example/MapReduceStuAvg.class
+org/example/MapReduceStuAvg$MyMapper.class
+org/example/MapReduceStuAvg$MyReducer.class
